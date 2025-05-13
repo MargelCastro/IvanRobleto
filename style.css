@@ -1,57 +1,21 @@
-/* Estilos CSS personalizados para el diseño de collage */
-.grid-collage {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajusta el ancho mínimo según necesites */
-    grid-auto-rows: 200px; /* Altura base para las filas */
+/* Opcional: quitar bordes de nav bar en estados activos */
+.btn-sin:focus,
+.btn-con:active {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
-.grid-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 0.25rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+/* barra de navegacion */
+.navbar-toggler:focus {
+  border: none !important;
+  box-shadow: none !important; /* Opcional: también quita el resplandor del focus */
 }
 
-.grid-item img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-}
 
-.grid-item:hover img {
-    transform: scale(1.05);
-}
-
-/* Ajustes para el tamaño de los elementos del collage (puedes personalizar estos valores) */
-.grid-item:nth-child(5n+1) {
-    grid-row-start: span 2;
-}
-
-.grid-item:nth-child(7n+3) {
-    grid-column-start: span 2;
-}
-
-.grid-item:nth-child(11n+2) {
-    grid-row-start: span 3;
-    grid-column-start: span 1;
-}
-
-/* Estilos para el menú desplegable en móviles */
-.mobile-menu {
-    display: none; /* Oculto por defecto */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-}
-
-.mobile-menu.open {
-    display: block;
+@media (max-width: 991.98px) { /* Para pantallas pequeñas (hasta el breakpoint 'lg' de Bootstrap) */
+  .navbar-collapse.show .navbar-nav {
+    text-align: center; /* Centra el texto de los enlaces */
+  }
 }
 
